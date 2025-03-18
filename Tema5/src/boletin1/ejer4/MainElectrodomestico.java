@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class MainElectrodomestico {
 	public static void main(String[] args) {
+		int sumaElectrodomesticos = 0;
+		int sumaLavadoras = 0;
+		int sumaTelevisiones = 0;
 		ArrayList<Electrodomestico> electrodomesticos = new ArrayList<>();
 		Electrodomestico e1 = new Electrodomestico(10,50,'C',"Rojo");
 		Electrodomestico e2 = new Lavadora(100,45,'F',"Azul",50);
@@ -15,8 +18,16 @@ public class MainElectrodomestico {
 		
 		for(Electrodomestico e : electrodomesticos) {
 			e.precioFinal();
-			System.out.println(e.getPrecioBase());
+			sumaElectrodomesticos += e.getPrecioBase();
+			if (e instanceof Lavadora) {
+				sumaLavadoras += e.getPrecioBase();
+			}
+			if (e instanceof Television) {
+				sumaTelevisiones += e.getPrecioBase();
+			}
 		}
+		
+		System.out.println("Electrodomesticos: " + sumaElectrodomesticos + " lavadoras: " + sumaLavadoras + " televisiones: " + sumaTelevisiones);
 		
 
 	}
