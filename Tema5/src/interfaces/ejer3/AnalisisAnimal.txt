@@ -10,10 +10,23 @@ class AnimalDomestico implements Animal
 	- String color
 	----------------------------------
 	+ void vacunar()
-	+ boolean hacerCaso() : boolean
+	+ boolean hacerCaso()
 	hereda:
 		+ void dormir();
 		+ void comer();
+		+ abstract void hacerRuido()
+	----------------------------------
+
+class Perro extends AnimalDomestico
+	+ sacarPaseo()
+	hereda:
 		+ void hacerRuido()
+		+ boolean hacerCaso()
+
+class Gato extends AnimalDomestico
+	+ toserBolaPelo()
+	hereda:
+		+ void hacerRuido()
+		+ boolean hacerCaso()
 		
 

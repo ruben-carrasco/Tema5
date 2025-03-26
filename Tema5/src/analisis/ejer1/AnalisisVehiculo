@@ -1,0 +1,29 @@
+Vehiculo
+	- String marca
+	- String modelo
+	- String color
+	- String matricula
+	- boolean estadoMotor = false
+	- int marchaActual = 0
+	- int velocidadActual = 0
+	-------------------------------
+	+ parar()
+	+ arrancar()
+	+ subirMarcha()
+	+ bajarMarcha()
+	+ modificarVelocidad(int velocidad)
+	-------------------------------
+	+ Vehiculo(String marca, String modelo, String color, String matricula)
+	
+Turismo extends Vehiculo
+	Enum Uso {PROFESIONAL, PARTICULAR}
+	- int numPlazas
+	- Uso tipo
+
+Camion extends Vehiculo
+	- int pesoMax
+	- boolean transportaPeligro
+
+Motocicleta extends Vehiculo
+	- int cilindrada
+	- boolean requiereCarnet
