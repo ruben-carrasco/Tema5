@@ -6,10 +6,10 @@ public class mainVehiculo {
 		
 		v.arrancar();
 		v.isEstadoMotor();
-		v.acelerar(100);
+		v.acelerar(150);
 		System.out.println(v.getVelocidadActual());
 		System.out.println(v.getMarchaActual());
-		v.frenar(40);
+		v.frenar(70);
 		System.out.println(v.getVelocidadActual());
 		System.out.println(v.getMarchaActual());
 	}

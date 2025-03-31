@@ -1,0 +1,57 @@
+class Ficha
+	- int id
+	- String titulo
+	--------------------------------
+	
+	+ Ficha(int id, String titulo)
+	
+	+ getId
+	+ getTitulo
+	
+	+ abstract int tiempoPrestamo()
+	
+	
+	
+class Libro extends Ficha
+	- String autor
+	- String editorial
+	-----------------------
+	+ Libro(int id, String titulo, String autor, String editorial)
+	
+	+ getAutor
+	+ getEditorial
+	
+	Hereda:
+	+ int tiempoPrestamo()
+	
+	
+	
+class Revista extends Ficha
+	- String infoNumero
+	- long añoPublicacion
+	---------------------------
+	+ Revista(int id, String titulo, String infoNumero, long añoPublicacion)
+	
+	+ getInfoNumero
+	+ getAñoPublicacion
+	
+	Hereda:
+	+ int tiempoPrestamo()
+	
+	
+	
+class DVD extends Ficha
+	enum Tipo {PELICULA,DOCUMENTAL,SERIE}
+	- String director
+	- long año
+	- Tipo tipoDvd
+	---------------------------
+	+ DVD(int id, String titulo, String director, long año, String tipo)
+	
+	+ getDirector
+	+ getAño
+	+ getTipoDvd
+	
+	Hereda:
+	+ int tiempoPrestamo()
+	

@@ -94,9 +94,9 @@ public class Vehiculo {
 		boolean res = false;
 		if (velocidad > this.velocidadActual) {
 			res = true;
-			
-			while(velocidad > this.velocidadActual) {
-				if(velocidadActual == 0 && marchaActual < 1) {
+
+			while (velocidad > this.velocidadActual) {
+				if (velocidadActual == 0 && marchaActual < 1) {
 					subirMarcha();
 					System.out.println("Cambio de marcha");
 				} else if (velocidadActual == 30 && marchaActual < 2) {
@@ -122,9 +122,9 @@ public class Vehiculo {
 		boolean res = false;
 		if (velocidad < this.velocidadActual) {
 			res = true;
-			
-			while(velocidad < this.velocidadActual) {
-				if(velocidadActual == 99 && marchaActual > 4) {
+
+			while (velocidad < this.velocidadActual) {
+				if (velocidadActual == 99 && marchaActual > 4) {
 					bajarMarcha();
 					System.out.println("Cambio de marcha");
 				} else if (velocidadActual == 69 && marchaActual > 3) {
@@ -140,8 +140,8 @@ public class Vehiculo {
 					bajarMarcha();
 					System.out.println("Cambio de marcha");
 				}
+				this.velocidadActual--;
 			}
-			this.velocidadActual--;
 		}
 		return res;
 	}
