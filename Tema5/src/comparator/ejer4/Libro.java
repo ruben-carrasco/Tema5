@@ -1,4 +1,4 @@
-package analisis.ejer2;
+package comparator.ejer4;
 
 public class Libro extends Ficha {
 	private String autor;
