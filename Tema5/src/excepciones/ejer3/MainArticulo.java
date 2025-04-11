@@ -24,6 +24,7 @@ public class MainArticulo {
 			System.out.println(e);
 		} catch (StockNegativoException e) {
 			System.out.println(e);
+		} finally {
 		}
 
 		// Resultados

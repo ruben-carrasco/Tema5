@@ -10,16 +10,22 @@ public class MainFutbolista {
 		futbolistas[2] = new Futbolista(3, "Paco", 20, 10);
 		futbolistas[3] = new Futbolista(1, "Pepe", 76, 9);
 		futbolistas[4] = new Futbolista(4, "Luis", 27, 19);
-
-		Arrays.sort(futbolistas, new ComparaEdad());
+		
+		// edad ascendente
+		//Arrays.sort(futbolistas, new ComparaEdad());
+		// con lambda
+		Arrays.sort(futbolistas, (a,b) -> a.getEdad() - b.getEdad());
 
 		for (Futbolista f : futbolistas) {
 			System.out.println(f);
 		}
 
 		System.out.println();
-
-		Arrays.sort(futbolistas, new ComparaGoles());
+		
+		// de mas goles a menos goles
+		//Arrays.sort(futbolistas, new ComparaGoles());
+		// Con lambda
+		Arrays.sort(futbolistas, (a,b) -> b.getNumGoles() - a.getNumGoles());
 
 		for (Futbolista f : futbolistas) {
 			System.out.println(f);

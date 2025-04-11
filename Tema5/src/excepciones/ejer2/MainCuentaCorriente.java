@@ -11,6 +11,7 @@ public class MainCuentaCorriente {
 			System.out.println(e);
 		} catch (NombreVacioException e) {
 			System.out.println(e);
+		} finally {
 		}
 	}
 

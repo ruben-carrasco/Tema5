@@ -12,6 +12,7 @@ public class MainFecha {
 			System.out.println(e);
 		} catch (DiaIncorrectoException e) {
 			System.out.println(e);
+		} finally {
 		}
 
 		System.out.println(fecha1.esBisiesto());

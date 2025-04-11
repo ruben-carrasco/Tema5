@@ -15,7 +15,11 @@ public class NumerosOrdenados {
 		
 		System.out.println(Arrays.toString(numeros));
 		
-		Arrays.sort(numeros, new ComparaNumeros());
+		// Ordenado de forma decreciente con un objeto Comparator
+		//Arrays.sort(numeros, new ComparaNumeros());
+		
+		// Ordenado de forma decreciente con expresion lambda
+		Arrays.sort(numeros, (a,b) -> b - a);
 		
 		System.out.println(Arrays.toString(numeros));
 	}

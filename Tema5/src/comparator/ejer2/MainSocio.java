@@ -18,15 +18,21 @@ public class MainSocio {
 		socios.add(s2);
 		socios.add(s3);
 		socios.add(s4);
-		Collections.sort(socios, new ComparaNombre());
+		// ordena nombre de forma alfabetica
+		//Collections.sort(socios, new ComparaNombre());
+		// Con lambda
+		Collections.sort(socios, (a,b) -> a.getNombre().compareTo(b.getNombre()));
 
 		for (Socio so : socios) {
 			System.out.println(so);
 		}
 
 		System.out.println();
-
-		Collections.sort(socios, new ComparaEdad());
+		
+		// ordena por edad de mas edad a menos edad
+		//Collections.sort(socios, new ComparaEdad());
+		// Con lambda
+		Collections.sort(socios, (a,b) -> b.getEdad() - a.getEdad());
 
 		for (Socio so : socios) {
 			System.out.println(so);

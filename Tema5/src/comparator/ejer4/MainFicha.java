@@ -18,18 +18,24 @@ public class MainFicha {
 		fichas.add(l3);
 		fichas.add(l4);
 		fichas.add(l5);
-
-		fichas.sort(new ComparaTitulo());
-
+		
+		// Ordena de forma alfabetica una ficha por su titulo
+		//fichas.sort(new ComparaTitulo());
+		// Con lambda
+		fichas.sort((a,b) -> a.getTitulo().compareTo(b.getTitulo()));
+		
+		
 		for (Ficha f : fichas) {
 			System.out.println(f);
 		}
 
 		System.out.println();
-
-		Collections.sort(fichas);
-		;
-
+		
+		// Ordena las fichas por su identificador de forma ascendente
+		//Collections.sort(fichas);
+		// Con lambda
+		Collections.sort(fichas, (a,b) -> a.getId() - b.getId());
+			
 		for (Ficha f : fichas) {
 			System.out.println(f);
 		}
